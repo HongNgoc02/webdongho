@@ -1,0 +1,121 @@
+.orders-container {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 1.5rem;
+}
+
+.orders-section h2 {
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-primary);
+}
+
+.orders-table-wrapper {
+  overflow-x: auto;
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.admin-table thead {
+  background-color: var(--neutral-light);
+  border-bottom: 2px solid var(--border-color);
+}
+
+.admin-table th {
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.admin-table td {
+  padding: 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.admin-table tbody tr:hover {
+  background-color: var(--neutral-light);
+}
+
+.items-count {
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.3rem;
+}
+
+.items-list {
+  list-style: none;
+  padding: 0;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.items-list li {
+  margin-bottom: 0.2rem;
+}
+
+.amount {
+  color: var(--primary-teal);
+  font-weight: 600;
+}
+
+.status-select {
+  padding: 0.5rem 0.8rem;
+  border: 2px solid var(--border-color);
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.status-select:focus {
+  outline: none;
+  border-color: var(--primary-teal);
+}
+
+.status-select.pending {
+  color: #991b1b;
+}
+
+.status-select.processing {
+  color: #92400e;
+}
+
+.status-select.delivered {
+  color: #065f46;
+}
+
+.btn-view {
+  padding: 0.5rem 1rem;
+  background-color: var(--primary-teal);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 0.85rem;
+}
+
+.btn-view:hover {
+  background-color: #0d7f72;
+}
+
+@media (max-width: 768px) {
+  .orders-table-wrapper {
+    font-size: 0.9rem;
+  }
+
+  .admin-table th,
+  .admin-table td {
+    padding: 0.8rem 0.5rem;
+  }
+
+  .items-list {
+    display: none;
+  }
+}

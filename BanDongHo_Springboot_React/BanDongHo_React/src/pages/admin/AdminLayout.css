@@ -1,0 +1,166 @@
+.admin-layout {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  min-height: 100vh;
+  gap: 0;
+}
+
+.admin-sidebar {
+  background-color: var(--primary-dark);
+  color: white;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.admin-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.admin-logo .logo-icon {
+  font-size: 2rem;
+}
+
+.admin-logo .logo-text {
+  background: linear-gradient(135deg, var(--primary-teal) 0%, var(--accent-warm) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.admin-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  color: white;
+  transition: all 0.3s;
+}
+
+.nav-item:hover {
+  background-color: rgba(13, 148, 136, 0.2);
+  color: var(--primary-teal);
+}
+
+.nav-item.active {
+  background-color: var(--primary-teal);
+  color: white;
+}
+
+.nav-icon {
+  font-size: 1.3rem;
+}
+
+.admin-user {
+  background-color: rgba(13, 148, 136, 0.1);
+  padding: 1rem;
+  border-radius: 8px;
+  border-top: 1px solid rgba(13, 148, 136, 0.2);
+  margin-top: auto;
+}
+
+.admin-user-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.avatar {
+  font-size: 1.8rem;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-teal);
+  border-radius: 8px;
+}
+
+.user-name {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.user-role {
+  font-size: 0.85rem;
+  color: #ccc;
+}
+
+.btn-logout {
+  width: 100%;
+  padding: 0.7rem;
+  background-color: #ef4444;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.btn-logout:hover {
+  background-color: #dc2626;
+}
+
+.admin-main {
+  background-color: var(--neutral-light);
+  padding: 2rem;
+}
+
+.admin-header {
+  margin-bottom: 2rem;
+}
+
+.admin-header h1 {
+  font-size: 2rem;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.admin-header p {
+  color: var(--text-secondary);
+}
+
+@media (max-width: 768px) {
+  .admin-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-sidebar {
+    height: auto;
+    position: relative;
+  }
+
+  .admin-nav {
+    flex-direction: row;
+    margin-bottom: 1rem;
+  }
+
+  .nav-item {
+    flex: 1;
+    padding: 0.8rem;
+  }
+
+  .nav-icon {
+    display: none;
+  }
+}
